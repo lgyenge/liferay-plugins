@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="dinet.orgsetup62.service.CegLocalService" class="dinet.orgsetup62.service.impl.CegLocalServiceImpl" />
+	<bean id="dinet.orgsetup62.service.persistence.CegPersistence" class="dinet.orgsetup62.service.persistence.CegPersistenceImpl" parent="basePersistence" />
+	<bean id="dinet.orgsetup62.service.FooLocalService" class="dinet.orgsetup62.service.impl.FooLocalServiceImpl" />
+	<bean id="dinet.orgsetup62.service.FooService" class="dinet.orgsetup62.service.impl.FooServiceImpl" />
+	<bean id="dinet.orgsetup62.service.persistence.FooPersistence" class="dinet.orgsetup62.service.persistence.FooPersistenceImpl" parent="basePersistence" />
+	<bean id="dinet.orgsetup62.service.OrgLocalService" class="dinet.orgsetup62.service.impl.OrgLocalServiceImpl" />
+	<bean id="dinet.orgsetup62.service.persistence.OrgPersistence" class="dinet.orgsetup62.service.persistence.OrgPersistenceImpl" parent="basePersistence" />
+	<bean id="dinet.orgsetup62.service.ProductLocalService" class="dinet.orgsetup62.service.impl.ProductLocalServiceImpl" />
+	<bean id="dinet.orgsetup62.service.persistence.ProductPersistence" class="dinet.orgsetup62.service.persistence.ProductPersistenceImpl" parent="basePersistence" />
+</beans>

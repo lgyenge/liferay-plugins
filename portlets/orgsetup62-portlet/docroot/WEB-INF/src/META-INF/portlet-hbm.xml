@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="dinet.orgsetup62.model.Ceg" />
+	<import class="dinet.orgsetup62.model.Foo" />
+	<import class="dinet.orgsetup62.model.Org" />
+	<import class="dinet.orgsetup62.model.Product" />
+	<class name="dinet.orgsetup62.model.impl.CegImpl" table="orgsetup_Ceg">
+		<cache usage="read-write" />
+		<id name="cegId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="azon_r" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subAzon_r" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="category_r" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgname_r" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="azon_u" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subAzon_u" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="liferayOrgId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="orgname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="logo" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="categoryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postalcode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="street" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contact" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="web" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="htmldescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="keywords" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pageURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pagename" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="date" type="org.hibernate.type.TimestampType" column="date_" />
+		<property name="pageURLAzon" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dinet.orgsetup62.model.impl.FooImpl" table="orgsetup_Foo">
+		<cache usage="read-write" />
+		<id name="fooId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="field1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="field2" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="field3" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="field4" type="org.hibernate.type.TimestampType" />
+		<property name="field5" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dinet.orgsetup62.model.impl.OrgImpl" table="orgsetup_Org">
+		<cache usage="read-write" />
+		<id name="orgID" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="origAzon" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="azon_r" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="subAzon_r" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="category_r" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="orgname_r" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="postalCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="webURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="contact" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="keywords" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="imageURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="dinet.orgsetup62.model.impl.ProductImpl" table="orgsetup_Product">
+		<cache usage="read-write" />
+		<id name="azon" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="services" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="image" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="datasheet" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="distributor" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="category" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="subcategory" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pageURL" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="pagetitle" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="startingpage" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="date" type="org.hibernate.type.TimestampType" column="date_" />
+		<property name="liferayOrgId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="pageURLAzon" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

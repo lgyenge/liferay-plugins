@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="dinet.orgsetup62">
+	<author>gyengelaszlo</author>
+	<namespace>orgsetup</namespace>
+	
+	   
+	<entity name="Foo" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="fooId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="field1" type="String" />
+		<column name="field2" type="boolean" />
+		<column name="field3" type="int" />
+		<column name="field4" type="Date" />
+		<column name="field5" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="field1" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Field2" return-type="Collection">
+			<finder-column name="field2" />
+		</finder>
+	</entity>
+	
+    <entity name="Ceg" local-service="true" remote-service="false">
+        <column name="cegId" type="long" primary="true"></column>
+        <column name="azon_r" type="long" primary="false"></column>
+        <column name="subAzon_r" type="long" primary="false"></column>
+        <column name="category_r" type="String"></column>
+        <column name="orgname_r" type="String"></column>
+        <column name="azon_u" type="long" primary="false"></column>
+        <column name="subAzon_u" type="long" primary="false"></column>
+        <column name="liferayOrgId" type="long"></column>
+        <column name="orgname" type="String"></column>
+        <column name="logo" type="String"></column>
+        <column name="categoryId" type="long"></column>
+        <column name="category" type="String"></column>
+        <column name="postalcode" type="String"></column>
+        <column name="city" type="String"></column>
+        <column name="street" type="String"></column>
+        <column name="contact" type="String"></column>
+        <column name="web" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="htmldescription" type="String"></column>
+        <column name="keywords" type="String"></column>
+        <column name="pageURL" type="String"></column>
+        <column name="pagename" type="String"></column>
+        <column name="date" type="Date"></column>
+        <column name="pageURLAzon" type="String"></column>
+        <finder name="A" return-type="Collection">
+            <finder-column name="azon_u"></finder-column>
+        </finder>
+        <finder name="LiferayOrgId" return-type="Collection">
+            <finder-column name="liferayOrgId"></finder-column>
+        </finder>
+        <finder name="PageURLAzon" return-type="Collection">
+            <finder-column name="pageURLAzon"></finder-column>
+        </finder>
+        <finder name="CategoryName" return-type="Collection">
+            <finder-column name="category"></finder-column>
+        </finder>
+    </entity>
+    <entity name="Product" remote-service="false" local-service="true">
+        <column name="azon" type="long" primary="true"></column>
+        <column name="name" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="services" type="String"></column>
+        <column name="image" type="String"></column>
+        <column name="datasheet" type="String"></column>
+        <column name="distributor" type="String"></column>
+        <column name="category" type="String"></column>
+        <column name="subcategory" type="String"></column>
+        <column name="pageURL" type="String"></column>
+        <column name="pagetitle" type="String"></column>
+        <column name="startingpage" type="String"></column>
+        <column name="date" type="Date"></column>
+        <column name="liferayOrgId" type="long"></column>
+        <column name="pageURLAzon" type="String"></column>
+        <finder name="A" return-type="Product">
+            <finder-column name="azon"></finder-column>
+        </finder>
+        <finder name="LiferayOrgId" return-type="Collection">
+            <finder-column name="liferayOrgId"></finder-column>
+        </finder>
+        <finder name="PageURLAzon" return-type="Collection">
+            <finder-column name="pageURLAzon"></finder-column>
+        </finder>
+    </entity>
+    <entity name="Org" local-service="true" remote-service="false">
+        <column name="orgID" type="long" primary="true"></column>
+        <column name="origAzon" type="long" primary="false"></column>
+        <column name="azon_r" type="long" primary="false"></column>
+        <column name="subAzon_r" type="long" primary="false"></column>
+        <column name="category_r" type="String"></column>
+        <column name="orgname_r" type="String"></column>
+        <column name="city" type="String"></column>
+        <column name="address1" type="String"></column>
+        <column name="postalCode" type="String"></column>
+        <column name="webURL" type="String"></column>
+        <column name="contact" type="String"></column>
+        <column name="emailAddress" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="keywords" type="String"></column>
+        <column name="imageURL" type="String"></column>
+        <finder name="A_SA" return-type="Org">
+            <finder-column name="azon_r"></finder-column>
+            <finder-column name="subAzon_r"></finder-column>
+        </finder>
+    </entity>
+    
+</service-builder>

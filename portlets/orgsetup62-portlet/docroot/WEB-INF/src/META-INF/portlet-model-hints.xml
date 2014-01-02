@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="dinet.orgsetup62.model.Ceg">
+		<field name="cegId" type="long" />
+		<field name="azon_r" type="long" />
+		<field name="subAzon_r" type="long" />
+		<field name="category_r" type="String" />
+		<field name="orgname_r" type="String" />
+		<field name="azon_u" type="long" />
+		<field name="subAzon_u" type="long" />
+		<field name="liferayOrgId" type="long" />
+		<field name="orgname" type="String" />
+		<field name="logo" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="categoryId" type="long" />
+		<field name="category" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="postalcode" type="String" />
+		<field name="city" type="String" />
+		<field name="street" type="String" />
+		<field name="contact" type="String" />
+		<field name="web" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="htmldescription" type="String">
+			<hint name="max-length">10000</hint>
+		</field>
+		<field name="keywords" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="pageURL" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="pagename" type="String" />
+		<field name="date" type="Date" />
+		<field name="pageURLAzon" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+	</model>
+	<model name="dinet.orgsetup62.model.Foo">
+		<field name="fooId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="field1" type="String" />
+		<field name="field2" type="boolean" />
+		<field name="field3" type="int" />
+		<field name="field4" type="Date" />
+		<field name="field5" type="String" />
+	</model>
+	<model name="dinet.orgsetup62.model.Org">
+		<field name="orgID" type="long" />
+		<field name="origAzon" type="long" />
+		<field name="azon_r" type="long" />
+		<field name="subAzon_r" type="long" />
+		<field name="category_r" type="String" />
+		<field name="orgname_r" type="String" />
+		<field name="city" type="String" />
+		<field name="address1" type="String" />
+		<field name="postalCode" type="String" />
+		<field name="webURL" type="String" />
+		<field name="contact" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="keywords" type="String">
+			<hint name="max-length">2000</hint>
+		</field>
+		<field name="imageURL" type="String">
+			<hint name="max-length">512</hint>
+		</field>
+	</model>
+	<model name="dinet.orgsetup62.model.Product">
+		<field name="azon" type="long" />
+		<field name="name" type="String" />
+		<field name="description" type="String">
+			<hint name="max-length">4000</hint>
+		</field>
+		<field name="services" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="image" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="datasheet" type="String" />
+		<field name="distributor" type="String" />
+		<field name="category" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="subcategory" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="pageURL" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="pagetitle" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="startingpage" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+		<field name="date" type="Date" />
+		<field name="liferayOrgId" type="long" />
+		<field name="pageURLAzon" type="String">
+			<hint name="max-length">256</hint>
+		</field>
+	</model>
+</model-hints>
